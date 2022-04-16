@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="container">
+    <h1>Receipes API Client</h1>
+    <div class="form-group">
+      <label for="">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        name="title"
+        id="title"
+        aria-describedby="titlehelp"
+        placeholder="Title of Receipe"
+      />
+      <small id="titlehelp" class="form-text text-muted"
+        >Enter Title of Receipe</small
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="">body</label>
+      <input
+        type="text"
+        class="form-control"
+        name=""
+        id="body"
+        aria-describedby="bodyhelp"
+        placeholder="Body of Receipe"
+      />
+      <small id="bodyhelp" class="form-text text-muted">Enter Details</small>
+    </div>
+    <button id="addbtn" class="btn btn-info">Add Receipe</button>
+
+    <div id="recepies"><h3>Loading ....</h3></div>
+
+    <!-- Button trigger modal -->
+    <!-- <button
+      type="button"
+      class="btn btn-primary btn-lg"
+      data-toggle="modal"
+      data-target="#updateModel"
+    >
+      Launch
+    </button> -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="updateModel"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modelTitleId"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Update Record</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <div class="form-group">
+              <label for="">Title</label>
+              <input type="text"
+                class="form-control" name="updateTitle" id="updateTitle" aria-describedby="updateTitlehelp" placeholder="">
+              <small id="updateTitlehelp" class="form-text text-muted">Help text</small>
+            </div>
+
+            <div class="form-group">
+              <label for="">Body</label>
+              <textarea class="form-control" name="updateBody" id="updateBody" rows="3"></textarea>
+            </div>
+            <!-- <input type="text" id="updateTitle" /> <br /> -->
+            <!-- <input type="text" id="updateBody" /> <br /> -->
+            <input type="hidden" id="updateId" /> <br />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              id="updateSave"
+              class="btn btn-primary"
+              data-dismiss="modal"
+            >
+              Update
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./jquery-3.6.0.min.js"></script>
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
